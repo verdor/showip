@@ -39,7 +39,13 @@ end
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+group :development do
+  gem 'capistrano'
+  gem "rvm-capistrano"
+end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use Thin for production
+gem 'thin', group: :production
